@@ -1,0 +1,7 @@
+.vscode
+.tags
+.build
+.mbed
+mbed-os
+projectfiles
+*.py*
