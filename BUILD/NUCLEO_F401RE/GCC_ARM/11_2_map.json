@@ -1,0 +1,241 @@
+[
+    {
+        "module": "Nucleo_BLE_API/common",
+        "size": {
+            ".text": 444,
+            ".data": 0,
+            ".bss": 0,
+            ".text-delta": 444,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
+        "module": "Nucleo_BLE_BlueNRG/BlueNRGDevice.o",
+        "size": {
+            ".text": 548,
+            ".data": 0,
+            ".bss": 180,
+            ".text-delta": 548,
+            ".data-delta": 0,
+            ".bss-delta": 180
+        }
+    },
+    {
+        "module": "Nucleo_BLE_BlueNRG/BlueNRGGap.o",
+        "size": {
+            ".text": 1574,
+            ".data": 0,
+            ".bss": 19,
+            ".text-delta": 1574,
+            ".data-delta": 0,
+            ".bss-delta": 19
+        }
+    },
+    {
+        "module": "Nucleo_BLE_BlueNRG/BlueNRGGattServer.o",
+        "size": {
+            ".text": 1322,
+            ".data": 0,
+            ".bss": 0,
+            ".text-delta": 1322,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
+        "module": "Nucleo_BLE_BlueNRG/btle",
+        "size": {
+            ".text": 508,
+            ".data": 0,
+            ".bss": 6,
+            ".text-delta": 508,
+            ".data-delta": 0,
+            ".bss-delta": 6
+        }
+    },
+    {
+        "module": "Nucleo_BLE_BlueNRG/hci",
+        "size": {
+            ".text": 3024,
+            ".data": 0,
+            ".bss": 1721,
+            ".text-delta": 3024,
+            ".data-delta": 0,
+            ".bss-delta": 1721
+        }
+    },
+    {
+        "module": "Nucleo_BLE_BlueNRG/platform",
+        "size": {
+            ".text": 138,
+            ".data": 0,
+            ".bss": 0,
+            ".text-delta": 138,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
+        "module": "Nucleo_BLE_BlueNRG/utils",
+        "size": {
+            ".text": 906,
+            ".data": 0,
+            ".bss": 236,
+            ".text-delta": 906,
+            ".data-delta": 0,
+            ".bss-delta": 236
+        }
+    },
+    {
+        "module": "[fill]",
+        "size": {
+            ".text": 154,
+            ".data": 8,
+            ".bss": 50,
+            ".text-delta": 154,
+            ".data-delta": 8,
+            ".bss-delta": 50
+        }
+    },
+    {
+        "module": "[lib]/c.a",
+        "size": {
+            ".text": 27400,
+            ".data": 2472,
+            ".bss": 89,
+            ".text-delta": 27400,
+            ".data-delta": 2472,
+            ".bss-delta": 89
+        }
+    },
+    {
+        "module": "[lib]/gcc.a",
+        "size": {
+            ".text": 3248,
+            ".data": 0,
+            ".bss": 0,
+            ".text-delta": 3248,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
+        "module": "[lib]/misc",
+        "size": {
+            ".text": 240,
+            ".data": 4,
+            ".bss": 28,
+            ".text-delta": 240,
+            ".data-delta": 4,
+            ".bss-delta": 28
+        }
+    },
+    {
+        "module": "[lib]/stdc++.a",
+        "size": {
+            ".text": 432,
+            ".data": 0,
+            ".bss": 0,
+            ".text-delta": 432,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
+        "module": "main.o",
+        "size": {
+            ".text": 1954,
+            ".data": 0,
+            ".bss": 260,
+            ".text-delta": 1954,
+            ".data-delta": 0,
+            ".bss-delta": 260
+        }
+    },
+    {
+        "module": "mbed-os/cmsis",
+        "size": {
+            ".text": 584,
+            ".data": 0,
+            ".bss": 84,
+            ".text-delta": 584,
+            ".data-delta": 0,
+            ".bss-delta": 84
+        }
+    },
+    {
+        "module": "mbed-os/components",
+        "size": {
+            ".text": 62,
+            ".data": 0,
+            ".bss": 0,
+            ".text-delta": 62,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
+        "module": "mbed-os/drivers",
+        "size": {
+            ".text": 1172,
+            ".data": 0,
+            ".bss": 0,
+            ".text-delta": 1172,
+            ".data-delta": 0,
+            ".bss-delta": 0
+        }
+    },
+    {
+        "module": "mbed-os/hal",
+        "size": {
+            ".text": 1686,
+            ".data": 4,
+            ".bss": 66,
+            ".text-delta": 1686,
+            ".data-delta": 4,
+            ".bss-delta": 66
+        }
+    },
+    {
+        "module": "mbed-os/platform",
+        "size": {
+            ".text": 4208,
+            ".data": 260,
+            ".bss": 292,
+            ".text-delta": 4208,
+            ".data-delta": 260,
+            ".bss-delta": 292
+        }
+    },
+    {
+        "module": "mbed-os/rtos",
+        "size": {
+            ".text": 7020,
+            ".data": 168,
+            ".bss": 5973,
+            ".text-delta": 7020,
+            ".data-delta": 168,
+            ".bss-delta": 5973
+        }
+    },
+    {
+        "module": "mbed-os/targets",
+        "size": {
+            ".text": 8616,
+            ".data": 4,
+            ".bss": 900,
+            ".text-delta": 8616,
+            ".data-delta": 4,
+            ".bss-delta": 900
+        }
+    },
+    {
+        "summary": {
+            "static_ram": 12824,
+            "static_ram_delta": 12824,
+            "total_flash": 68160,
+            "total_flash_delta": 68160
+        }
+    }
+]
