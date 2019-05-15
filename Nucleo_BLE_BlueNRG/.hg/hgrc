@@ -1,2 +1,4 @@
 [paths]
 default = http://developer.mbed.org/teams/ST-Americas-mbed-Team/code/Nucleo_BLE_BlueNRG/
+[ui]
+ignore.local = .hg/hgignore
