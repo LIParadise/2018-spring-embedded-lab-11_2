@@ -67,8 +67,9 @@ int main(void)
 
     DEBUG("Initialising \n\r");
     ble.init();
+    DEBUG("\r\nAdding Device Name");
     ble.setDeviceName((uint8_t*)DEVICE_NAME);
-    ble.setAppearance((uint16_t*)DEVICE_NAME);
+    DEBUG("\r\n\r\n");
     ble.onDisconnection(disconnectionCallback);
     ble.onConnection(connectionCallback);
     ble.onTimeout(connectionTimeoutCallback);
@@ -83,18 +84,24 @@ int main(void)
     DeviceInformationService deviceInfo(ble, "ST", "Nucleo", "SN1");
 
     /* Setup advertising. */
-    ble.accumulateAdvertisingPayload(GapAdvertisingData::BREDR_NOT_SUPPORTED | GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
-    ble.accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS, (uint8_t *)uuid16_list, sizeof(uuid16_list));
-    ble.accumulateAdvertisingPayload(GapAdvertisingData::GENERIC_HEART_RATE_SENSOR);
+    ble_error_t myWatchDog = BLE_ERROR_NONE;
+
+    myWatchDog = ble.accumulateAdvertisingPayload(GapAdvertisingData::BREDR_NOT_SUPPORTED | GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
+    if( myWatchDog != BLE_ERROR_NONE ) { DEBUG("??? acc payload\r\n"); myWatchDog = BLE_ERROR_NONE; }
+    myWatchDog = ble.accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS, (uint8_t *)uuid16_list, sizeof(uuid16_list));
+    if( myWatchDog != BLE_ERROR_NONE ) { DEBUG("??? acc payload\r\n"); myWatchDog = BLE_ERROR_NONE; }
+    myWatchDog = ble.accumulateAdvertisingPayload(GapAdvertisingData::GENERIC_HEART_RATE_SENSOR);
+    if( myWatchDog != BLE_ERROR_NONE ) { DEBUG("??? acc payload\r\n"); myWatchDog = BLE_ERROR_NONE; }
     ble.accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LOCAL_NAME, (uint8_t *)DEVICE_NAME, sizeof(DEVICE_NAME));
+    if( myWatchDog != BLE_ERROR_NONE ) { DEBUG("??? acc payload\r\n"); myWatchDog = BLE_ERROR_NONE; }
 
     ble.setAdvertisingType(GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED);
     ble.setAdvertisingInterval(1600); /* 1000ms; in multiples of 0.625ms. */
 
-    ble_error_t my_ret_num = ble.startAdvertising();
-    if (my_ret_num != BLE_ERROR_NONE)
+    myWatchDog = ble.startAdvertising();
+    if (myWatchDog != BLE_ERROR_NONE)
     {
-        DEBUG("this is in theory possible; error code:%d\n\r", my_ret_num);
+        DEBUG("this is in theory possible; error code:%d\n\r", myWatchDog);
     }
     else
     {
