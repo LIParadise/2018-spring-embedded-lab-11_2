@@ -1,6 +1,8 @@
 .vscode
 .tags
+tags
 .build
+BUILD
 .mbed
 mbed-os
 projectfiles

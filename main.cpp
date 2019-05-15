@@ -80,7 +80,13 @@ int main(void)
     ble.accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LOCAL_NAME, (uint8_t *)DEVICE_NAME, sizeof(DEVICE_NAME));
     ble.setAdvertisingType(GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED);
     ble.setAdvertisingInterval(1600); /* 1000ms; in multiples of 0.625ms. */
-    ble.startAdvertising();
+
+    ble_error_t my_ret_num = ble.startAdvertising();
+    if( my_ret_num != BLE_ERROR_NONE ){
+        DEBUG( "this is in theory possible; error code:%d\n\r", my_ret_num );
+    }else {
+        DEBUG( "the board shall be broken.\n\r");
+    }
 
     while (true)
     {
@@ -106,4 +112,4 @@ int main(void)
     }
 }
 
-// *******************************ARM University Program Copyright © ARM Ltd 2014*************************************//
+// *******************************ARM University Program Copyright ï¿½ ARM Ltd 2014*************************************//
